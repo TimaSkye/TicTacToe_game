@@ -23,8 +23,6 @@ class Board:
                     return False
         return True
 
-        # Этот метод будет определять победу.
-
     def check_win(self, player):
         for i in range(3):
             if (all([self.board[i][j] == player for j in range(3)]) or
@@ -37,6 +35,11 @@ class Board:
         ):
             return True
         return False
+
+    def save_result(self, result):
+        file = open('results.txt', 'a')
+        file.write(f'{result}\n')
+        file.close()
 
     def __str__(self):
         return (

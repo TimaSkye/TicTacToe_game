@@ -47,9 +47,11 @@ def main():
         game.make_move(row, column, current_player)
         game.display()
         if game.check_win(current_player):
+            game.save_result(f'победили {current_player}')
             print(f'Победили {current_player}.')
             running = False
         elif game.is_board_full():
+            game.save_result('Ничья!')
             print('Ничья!')
             running = False
 
