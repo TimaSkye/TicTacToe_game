@@ -37,9 +37,8 @@ class Board:
         return False
 
     def save_result(self, result):
-        file = open('results.txt', 'a')
-        file.write(f'{result}\n')
-        file.close()
+        with open('results.txt', 'a') as f:
+        f.write(f'{result}\n')
 
     def __str__(self):
         return (
