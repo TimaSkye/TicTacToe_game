@@ -36,10 +36,6 @@ class Board:
             return True
         return False
 
-    def save_result(self, result):
-        with open('results.txt', 'a') as f:
-        f.write(f'{result}\n')
-
     def __str__(self):
         return (
             'Объект игрового поля размером '
